@@ -7,7 +7,6 @@ import com.vaadin.flow.router.Route;
 public class MainView extends VerticalLayout {
 
     public MainView() {
-
     }
 
 }
