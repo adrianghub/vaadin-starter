@@ -12,7 +12,7 @@ public class Item extends AbstractEntity {
     @NotEmpty
     private String name = "";
 
-    @NotEmpty
+    @NotNull
     private Double price = 0.0;
 
     @ManyToOne
