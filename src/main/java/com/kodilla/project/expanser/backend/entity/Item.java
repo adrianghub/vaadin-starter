@@ -1,4 +1,4 @@
-package com.vaadin.tutorial.crm.backend.entity;
+package com.kodilla.project.expanser.backend.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;

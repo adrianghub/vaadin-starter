@@ -1,4 +1,4 @@
-package com.vaadin.tutorial.crm.ui;
+package com.kodilla.project.expanser.ui;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;

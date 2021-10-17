@@ -1,4 +1,4 @@
-package com.vaadin.tutorial.crm;
+package com.kodilla.project.expanser;
 
 import com.vaadin.flow.theme.AbstractTheme;
 import com.vaadin.testbench.ScreenshotOnFailureRule;
