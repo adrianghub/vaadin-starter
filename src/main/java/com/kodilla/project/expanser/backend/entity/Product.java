@@ -5,6 +5,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Entity
 public class Product extends AbstractEntity {
@@ -24,12 +25,23 @@ public class Product extends AbstractEntity {
     @ManyToOne
     private Category category;
 
+    @NotNull
+    private Date date;
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public Shop getShop() {
@@ -48,11 +60,11 @@ public class Product extends AbstractEntity {
         this.category = category;
     }
 
-    public Double getPrice() {
-        return price;
+    public Date getDate() {
+        return date;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

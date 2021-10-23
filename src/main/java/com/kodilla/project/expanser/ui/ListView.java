@@ -49,6 +49,7 @@ public class ListView extends VerticalLayout {
         grid.setColumns("name", "price");
         grid.addColumn(product -> product.getShop().getName()).setHeader("Shop");
         grid.addColumn(product -> product.getCategory().getName()).setHeader("Category");
+        grid.addColumn("date");
         grid.getColumns().forEach(col -> col.setAutoWidth(true));
     }
 }
