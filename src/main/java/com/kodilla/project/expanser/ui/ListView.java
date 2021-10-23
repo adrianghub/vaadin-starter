@@ -4,6 +4,7 @@ import com.kodilla.project.expanser.backend.entity.Product;
 import com.kodilla.project.expanser.backend.service.ExpanserService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -15,6 +16,7 @@ import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
 
+@CssImport("./styles/shared-styles.css")
 @PWA(name = "Expanse Tracker", shortName = "Expanse Tracker", enableInstallPrompt = false)
 @PageTitle("Expanse Tracker")
 @Theme(value = Lumo.class, variant = Lumo.DARK)
@@ -72,10 +74,16 @@ public class ListView extends VerticalLayout {
         filterProducts.addValueChangeListener(e -> updateList());
 
         Button addProductButton = new Button("Add product");
+        addProductButton.addClickListener(e -> addProduct());
 
         HorizontalLayout toolbar = new HorizontalLayout(filterProducts, addProductButton);
         toolbar.addClassName("toolbar");
         return toolbar;
+    }
+
+    private void addProduct() {
+        grid.asSingleSelect().clear();
+        editProduct(new Product());
     }
 
     private void configureGrid() {
