@@ -1,10 +1,10 @@
 package com.kodilla.project.expanser.backend.service;
 
 import com.kodilla.project.expanser.backend.entity.Category;
-import com.kodilla.project.expanser.backend.entity.Item;
+import com.kodilla.project.expanser.backend.entity.Product;
 import com.kodilla.project.expanser.backend.entity.Shop;
 import com.kodilla.project.expanser.backend.repository.CategoryRepository;
-import com.kodilla.project.expanser.backend.repository.ItemRepository;
+import com.kodilla.project.expanser.backend.repository.ProductRepository;
 import com.kodilla.project.expanser.backend.repository.ShopRepository;
 import org.springframework.stereotype.Service;
 
@@ -17,42 +17,42 @@ import java.util.stream.Stream;
 @Service
 public class ExpanserService {
 
-    private final ItemRepository itemRepository;
+    private final ProductRepository productRepository;
     private final ShopRepository shopRepository;
     private final CategoryRepository categoryRepository;
 
     public ExpanserService(
-            ItemRepository itemRepository,
+            ProductRepository productRepository,
             ShopRepository shopRepository,
             CategoryRepository categoryRepository
     ) {
-        this.itemRepository = itemRepository;
+        this.productRepository = productRepository;
         this.shopRepository = shopRepository;
         this.categoryRepository = categoryRepository;
     }
 
-    public List<Item> findAllItems(String itemFilter) {
-        if (itemFilter == null || itemFilter.isEmpty()) {
-            return itemRepository.findAll();
+    public List<Product> findAllProducts(String productFilter) {
+        if (productFilter == null || productFilter.isEmpty()) {
+            return productRepository.findAll();
         } else {
-            return itemRepository.search(itemFilter);
+            return productRepository.search(productFilter);
         }
     }
 
-    public long countItems() {
-        return itemRepository.count();
+    public long countProducts() {
+        return productRepository.count();
     }
 
-    public void deleteItem(Item item) {
-        itemRepository.delete(item);
+    public void deleteProduct(Product product) {
+        productRepository.delete(product);
     }
 
-    public void saveContact(Item item) {
-        if (item == null) {
-            System.err.println("Cannot find item. Are you sure you have connected your form to the application?");
+    public void saveProduct(Product product) {
+        if (product == null) {
+            System.err.println("Cannot find product.");
             return;
         }
-        itemRepository.save(item);
+        productRepository.save(product);
     }
 
     public List<Shop> findAllShops() {
@@ -79,20 +79,20 @@ public class ExpanserService {
                             .map(Category::new).collect(Collectors.toList()));
         }
 
-        if (itemRepository.count() == 0) {
+        if (productRepository.count() == 0) {
             Random r = new Random(0);
             List<Shop> shops = shopRepository.findAll();
             List<Category> categories = categoryRepository.findAll();
-            itemRepository.saveAll(
+            productRepository.saveAll(
                     Stream.of("Vacuum 13.40", "Knife 2.40")
                             .map(properties -> {
                                 String[] split = properties.split(" ");
-                                Item item = new Item();
-                                item.setName(split[0]);
-                                item.setPrice(Double.parseDouble(split[1]));
-                                item.setShop(shops.get(r.nextInt(shops.size())));
-                                item.setCategory(categories.get(r.nextInt(categories.size())));
-                                return item;
+                                Product product = new Product();
+                                product.setName(split[0]);
+                                product.setPrice(Double.parseDouble(split[1]));
+                                product.setShop(shops.get(r.nextInt(shops.size())));
+                                product.setCategory(categories.get(r.nextInt(categories.size())));
+                                return product;
                             }).collect(Collectors.toList()));
         }
     }

@@ -11,7 +11,7 @@ public class Shop extends AbstractEntity {
     private String name;
 
     @OneToMany(mappedBy = "shop", fetch = FetchType.EAGER)
-    private List<Item> items = new LinkedList<>();
+    private List<Product> products = new LinkedList<>();
 
     public Shop() {}
 
@@ -27,11 +27,11 @@ public class Shop extends AbstractEntity {
         this.name = name;
     }
 
-    public List<Item> getItems() {
-        return items;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

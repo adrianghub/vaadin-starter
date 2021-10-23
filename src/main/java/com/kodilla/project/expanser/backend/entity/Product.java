@@ -7,7 +7,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Item extends AbstractEntity {
+public class Product extends AbstractEntity {
 
     @NotEmpty
     private String name = "";
