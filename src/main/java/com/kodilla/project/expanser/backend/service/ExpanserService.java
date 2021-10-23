@@ -9,8 +9,7 @@ import com.kodilla.project.expanser.backend.repository.ShopRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -70,7 +69,7 @@ public class ExpanserService {
 
         if (shopRepository.count() == 0) {
             shopRepository.saveAll(
-                    Stream.of("Biedronka,", "Lidl", "Orlen", "Spoldzienia mieszkaniowa", "Spotify")
+                    Stream.of("Biedronka", "Lidl", "Orlen", "Spoldzienia mieszkaniowa", "Spotify")
                             .map(Shop::new)
                             .collect(Collectors.toList()));
         }
@@ -86,7 +85,7 @@ public class ExpanserService {
             List<Shop> shops = shopRepository.findAll();
             List<Category> categories = categoryRepository.findAll();
             productRepository.saveAll(
-                    Stream.of("Vacuum 13.40 01/11/2021", "Knife 2.40 02/11/2021")
+                    Stream.of("Vacuum 13.40", "MonthlyPayment 19.99")
                             .map(properties -> {
                                 String[] split = properties.split(" ");
                                 Product product = new Product();
@@ -94,11 +93,7 @@ public class ExpanserService {
                                 product.setPrice(Double.parseDouble(split[1]));
                                 product.setShop(shops.get(r.nextInt(shops.size())));
                                 product.setCategory(categories.get(r.nextInt(categories.size())));
-                                try {
-                                    product.setDate(new SimpleDateFormat("dd/MM/yyyy").parse(split[2]));
-                                } catch (ParseException e) {
-                                    e.printStackTrace();
-                                }
+                                product.setDate(LocalDate.now());
                                 return product;
                             }).collect(Collectors.toList()));
         }

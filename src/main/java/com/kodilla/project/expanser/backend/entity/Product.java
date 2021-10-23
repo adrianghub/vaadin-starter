@@ -5,7 +5,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 public class Product extends AbstractEntity {
@@ -26,7 +26,7 @@ public class Product extends AbstractEntity {
     private Category category;
 
     @NotNull
-    private Date date;
+    private LocalDate date;
 
     public String getName() {
         return name;
@@ -60,11 +60,11 @@ public class Product extends AbstractEntity {
         this.category = category;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }

@@ -1,6 +1,7 @@
 package com.kodilla.project.expanser.ui;
 
 import com.kodilla.project.expanser.backend.entity.Product;
+import com.kodilla.project.expanser.backend.service.ExpanserService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -11,18 +12,21 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
-
-import java.util.Collections;
+import com.vaadin.flow.theme.Theme;
+import com.vaadin.flow.theme.lumo.Lumo;
 
 @PWA(name = "Expanse Tracker", shortName = "Expanse Tracker", enableInstallPrompt = false)
 @PageTitle("Expanse Tracker")
+@Theme(value = Lumo.class, variant = Lumo.DARK)
 @Route("")
 public class ListView extends VerticalLayout {
+    private final ExpanserService service;
     Grid<Product> grid = new Grid<>(Product.class);
     TextField filterProducts = new TextField();
     ProductForm form;
 
-    public ListView() {
+    public ListView(ExpanserService service) {
+        this.service = service;
         addClassName("expanse-tracker-view");
         setSizeFull();
 
@@ -30,9 +34,15 @@ public class ListView extends VerticalLayout {
         configureForm();
 
         add(
-            getToolbar(),
-            getContent()
+                getToolbar(),
+                getContent()
         );
+
+        updateList();
+    }
+
+    private void updateList() {
+        grid.setItems(service.findAllProducts(filterProducts.getValue()));
     }
 
     private Component getContent() {
@@ -46,14 +56,15 @@ public class ListView extends VerticalLayout {
     }
 
     private void configureForm() {
-        form = new ProductForm(Collections.emptyList(), Collections.emptyList());
+        form = new ProductForm(service.findAllShops(), service.findAllCategories());
         form.setWidth("25em");
     }
 
     private Component getToolbar() {
-        filterProducts.setPlaceholder("Filter products by name");
+        filterProducts.setPlaceholder("Find products by name");
         filterProducts.setClearButtonVisible(true);
         filterProducts.setValueChangeMode(ValueChangeMode.LAZY);
+        filterProducts.addValueChangeListener(e -> updateList());
 
         Button addProductButton = new Button("Add product");
 
