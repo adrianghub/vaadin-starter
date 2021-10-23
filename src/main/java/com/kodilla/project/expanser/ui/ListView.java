@@ -33,12 +33,17 @@ public class ListView extends VerticalLayout {
         configureGrid();
         configureForm();
 
-        add(
-                getToolbar(),
-                getContent()
-        );
+        add(getToolbar(), getContent());
 
         updateList();
+
+        closeProductForm();
+    }
+
+    private void closeProductForm() {
+        form.setProduct(null);
+        form.setVisible(false);
+        removeClassName("active");
     }
 
     private void updateList() {
@@ -81,5 +86,17 @@ public class ListView extends VerticalLayout {
         grid.addColumn(product -> product.getCategory().getName()).setHeader("Category");
         grid.addColumn("date");
         grid.getColumns().forEach(col -> col.setAutoWidth(true));
+
+        grid.asSingleSelect().addValueChangeListener(e -> editProduct(e.getValue()));
+    }
+
+    private void editProduct(Product product) {
+        if (product == null) {
+            closeProductForm();
+        } else {
+            form.setProduct(product);
+            form.setVisible(true);
+            addClassName("active");
+        }
     }
 }
