@@ -20,7 +20,7 @@ public class ProductForm extends FormLayout {
     NumberField price = new NumberField("Price");
     ComboBox<Shop> shop = new ComboBox<>("Shop");
     ComboBox<Category> category = new ComboBox<>("Category");
-    DatePicker date = new DatePicker();
+    DatePicker date = new DatePicker("Bought At");
 
     Button save =new Button("Save");
     Button delete =new Button("Delete");

@@ -12,23 +12,42 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
+import java.util.Collections;
+
 @PWA(name = "Expanse Tracker", shortName = "Expanse Tracker", enableInstallPrompt = false)
 @PageTitle("Expanse Tracker")
 @Route("")
 public class ListView extends VerticalLayout {
     Grid<Product> grid = new Grid<>(Product.class);
     TextField filterProducts = new TextField();
+    ProductForm form;
 
     public ListView() {
         addClassName("expanse-tracker-view");
         setSizeFull();
 
         configureGrid();
+        configureForm();
 
         add(
             getToolbar(),
-            grid
+            getContent()
         );
+    }
+
+    private Component getContent() {
+        HorizontalLayout content = new HorizontalLayout(grid, form);
+        content.setFlexGrow(2, grid);
+        content.setFlexGrow(1, form);
+        content.addClassName("content");
+        content.setSizeFull();
+
+        return content;
+    }
+
+    private void configureForm() {
+        form = new ProductForm(Collections.emptyList(), Collections.emptyList());
+        form.setWidth("25em");
     }
 
     private Component getToolbar() {
