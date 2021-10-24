@@ -5,6 +5,11 @@
 */
 
 /* Example: CSS class name to center align the content . */
+.login-view {
+  display: grid;
+  padding: 15em 50em;
+}
+
 @media all and (max-width: 1100px) {
   .expanser-view.active .toolbar,
   .expanser-view.active .product-grid {
