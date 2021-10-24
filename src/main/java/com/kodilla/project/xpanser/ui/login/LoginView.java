@@ -1,4 +1,4 @@
-package com.kodilla.project.expanser.ui.login;
+package com.kodilla.project.xpanser.ui.login;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H1;
@@ -9,7 +9,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @Route("login")
-@PageTitle("Login | Expanser")
+@PageTitle("Login | Xpanser")
 public class LoginView extends VerticalLayout {
 
     public LoginView() {
@@ -19,7 +19,7 @@ public class LoginView extends VerticalLayout {
         PasswordField password = new PasswordField();
         password.setPlaceholder("Password");
         add(
-                new H1("Expanser App"),
+                new H1("Xpanser App"),
                 email,
                 password,
                 new Button("Login")

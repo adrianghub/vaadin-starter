@@ -1,4 +1,4 @@
-package com.kodilla.project.expanser.ui;
+package com.kodilla.project.xpanser.ui;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.H1;
@@ -8,7 +8,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @Route(value = "about", layout = MainLayout.class)
-@PageTitle("About | Expanser")
+@PageTitle("About | Xpanser")
 public class AboutView extends VerticalLayout {
 
     public AboutView() {

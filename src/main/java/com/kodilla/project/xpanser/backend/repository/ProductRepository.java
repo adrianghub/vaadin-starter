@@ -1,6 +1,6 @@
-package com.kodilla.project.expanser.backend.repository;
+package com.kodilla.project.xpanser.backend.repository;
 
-import com.kodilla.project.expanser.backend.entity.Product;
+import com.kodilla.project.xpanser.backend.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

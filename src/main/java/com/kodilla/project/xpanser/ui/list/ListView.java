@@ -1,8 +1,8 @@
-package com.kodilla.project.expanser.ui.list;
+package com.kodilla.project.xpanser.ui.list;
 
-import com.kodilla.project.expanser.backend.entity.Product;
-import com.kodilla.project.expanser.backend.service.ExpanserService;
-import com.kodilla.project.expanser.ui.MainLayout;
+import com.kodilla.project.xpanser.backend.entity.Product;
+import com.kodilla.project.xpanser.backend.service.XpanserService;
+import com.kodilla.project.xpanser.ui.MainLayout;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
@@ -13,20 +13,19 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.PWA;
 
 @CssImport("./styles/shared-styles.css")
-@PageTitle("Product List | Expanser")
+@PageTitle("Product List | Xpanser")
 @Route(value = "", layout = MainLayout.class)
 public class ListView extends VerticalLayout {
-    private final ExpanserService service;
+    private final XpanserService service;
     Grid<Product> grid = new Grid<>(Product.class);
     TextField filterProducts = new TextField();
     ProductForm form;
 
-    public ListView(ExpanserService service) {
+    public ListView(XpanserService service) {
         this.service = service;
-        addClassName("expanser-view");
+        addClassName("Xpanser-view");
         setSizeFull();
 
         configureGrid();

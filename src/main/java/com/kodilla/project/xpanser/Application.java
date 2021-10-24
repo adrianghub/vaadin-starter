@@ -1,4 +1,4 @@
-package com.kodilla.project.expanser;
+package com.kodilla.project.xpanser;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

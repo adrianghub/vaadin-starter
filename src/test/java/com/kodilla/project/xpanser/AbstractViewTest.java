@@ -1,4 +1,4 @@
-package com.kodilla.project.expanser;
+package com.kodilla.project.Xpanser;
 
 import com.vaadin.flow.theme.AbstractTheme;
 import com.vaadin.testbench.ScreenshotOnFailureRule;

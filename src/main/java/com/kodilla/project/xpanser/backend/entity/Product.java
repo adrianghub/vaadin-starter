@@ -1,4 +1,4 @@
-package com.kodilla.project.expanser.backend.entity;
+package com.kodilla.project.xpanser.backend.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -19,7 +19,7 @@ public class Product extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name = "shop_id")
     @NotNull
-    private Shop shop;
+    private com.kodilla.project.xpanser.backend.entity.Shop shop;
 
     @NotNull
     @ManyToOne
@@ -44,11 +44,11 @@ public class Product extends AbstractEntity {
         this.price = price;
     }
 
-    public Shop getShop() {
+    public com.kodilla.project.xpanser.backend.entity.Shop getShop() {
         return shop;
     }
 
-    public void setShop(Shop shop) {
+    public void setShop(com.kodilla.project.xpanser.backend.entity.Shop shop) {
         this.shop = shop;
     }
 

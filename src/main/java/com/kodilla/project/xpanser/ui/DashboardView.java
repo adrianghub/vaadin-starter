@@ -1,6 +1,6 @@
-package com.kodilla.project.expanser.ui;
+package com.kodilla.project.xpanser.ui;
 
-import com.kodilla.project.expanser.backend.service.ExpanserService;
+import com.kodilla.project.xpanser.backend.service.XpanserService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.charts.Chart;
 import com.vaadin.flow.component.charts.model.ChartType;
@@ -12,11 +12,11 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @Route(value = "dashboard", layout = MainLayout.class)
-@PageTitle("Dashboard | Expanser")
+@PageTitle("Dashboard | Xpanser")
 public class DashboardView extends VerticalLayout {
-    private ExpanserService service;
+    private XpanserService service;
 
-    public DashboardView(ExpanserService service) {
+    public DashboardView(XpanserService service) {
         this.service = service;
         addClassName("dashboard-view");
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);

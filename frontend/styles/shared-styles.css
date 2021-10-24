@@ -11,8 +11,8 @@
 }
 
 @media all and (max-width: 1100px) {
-  .expanser-view.active .toolbar,
-  .expanser-view.active .product-grid {
+  .xpanser-view.active .toolbar,
+  .xpanser-view.active .product-grid {
     display: none;
   }
 }

@@ -1,10 +1,10 @@
-package com.kodilla.project.expanser.backend.service;
+package com.kodilla.project.xpanser.backend.service;
 
-import com.kodilla.project.expanser.backend.entity.*;
-import com.kodilla.project.expanser.backend.repository.CategoryRepository;
-import com.kodilla.project.expanser.backend.repository.ProductRepository;
-import com.kodilla.project.expanser.backend.repository.ShopRepository;
-import com.kodilla.project.expanser.backend.repository.UserRepository;
+import com.kodilla.project.xpanser.backend.entity.*;
+import com.kodilla.project.xpanser.backend.repository.CategoryRepository;
+import com.kodilla.project.xpanser.backend.repository.ProductRepository;
+import com.kodilla.project.xpanser.backend.repository.ShopRepository;
+import com.kodilla.project.xpanser.backend.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -15,14 +15,14 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service
-public class ExpanserService {
+public class XpanserService {
 
     private final ProductRepository productRepository;
     private final ShopRepository shopRepository;
     private final CategoryRepository categoryRepository;
     private final UserRepository userRepository;
 
-    public ExpanserService(
+    public XpanserService(
             ProductRepository productRepository,
             ShopRepository shopRepository,
             CategoryRepository categoryRepository,
@@ -70,8 +70,8 @@ public class ExpanserService {
     public void loadData() {
 
         if (userRepository.count() == 0) {
-            userRepository.save(new User("Andrzej", "admin1", Role.USER));
-            userRepository.save(new User("Bozena", "admin123", Role.ADMIN));
+            userRepository.save(new User("Andrzej", "email@email.co", "admin1", Role.USER));
+            userRepository.save(new User("Bozena", "email@email.co", "admin123", Role.ADMIN));
         }
 
         if (shopRepository.count() == 0) {
@@ -89,7 +89,7 @@ public class ExpanserService {
 
         if (productRepository.count() == 0) {
             Random r = new Random(0);
-            List<Shop> shops = shopRepository.findAll();
+            List<com.kodilla.project.xpanser.backend.entity.Shop> shops = shopRepository.findAll();
             List<Category> categories = categoryRepository.findAll();
             productRepository.saveAll(
                     Stream.of("Vacuum 13.40", "MonthlyPayment 19.99")

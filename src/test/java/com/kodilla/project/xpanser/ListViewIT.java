@@ -1,4 +1,4 @@
-package com.kodilla.project.expanser;
+package com.kodilla.project.Xpanser;
 
 import com.vaadin.flow.component.textfield.testbench.TextFieldElement;
 import org.junit.Assert;

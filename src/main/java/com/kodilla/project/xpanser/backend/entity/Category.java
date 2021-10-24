@@ -1,4 +1,4 @@
-package com.kodilla.project.expanser.backend.entity;
+package com.kodilla.project.xpanser.backend.entity;
 
 
 import org.hibernate.annotations.Formula;

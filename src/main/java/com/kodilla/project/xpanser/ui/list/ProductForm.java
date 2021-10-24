@@ -1,8 +1,8 @@
-package com.kodilla.project.expanser.ui.list;
+package com.kodilla.project.xpanser.ui.list;
 
-import com.kodilla.project.expanser.backend.entity.Category;
-import com.kodilla.project.expanser.backend.entity.Product;
-import com.kodilla.project.expanser.backend.entity.Shop;
+import com.kodilla.project.xpanser.backend.entity.Category;
+import com.kodilla.project.xpanser.backend.entity.Product;
+import com.kodilla.project.xpanser.backend.entity.Shop;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;

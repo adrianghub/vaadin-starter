@@ -1,4 +1,4 @@
-package com.kodilla.project.expanser.backend.entity;
+package com.kodilla.project.xpanser.backend.entity;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -26,8 +26,9 @@ public class User extends AbstractEntity {
     public User() {
     }
 
-    public User(String username, String password, Role rol) {
+    public User(String username, String email, String password, Role rol) {
         this.username = username;
+        this.email = email;
         this.role = role;
         this.passwordSalt = RandomStringUtils.random(SALT_RAND);
         this.passwordHash = DigestUtils.sha1Hex(password + passwordSalt);

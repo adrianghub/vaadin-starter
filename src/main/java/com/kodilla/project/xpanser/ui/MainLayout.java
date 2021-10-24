@@ -1,6 +1,6 @@
-package com.kodilla.project.expanser.ui;
+package com.kodilla.project.xpanser.ui;
 
-import com.kodilla.project.expanser.ui.list.ListView;
+import com.kodilla.project.xpanser.ui.list.ListView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.H1;
@@ -18,7 +18,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void createHeader() {
-        H1 title = new H1("Expanser");
+        H1 title = new H1("Xpanser");
         title.addClassNames("text-l", "m-m");
 
         HorizontalLayout header = new HorizontalLayout(
@@ -34,7 +34,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void createDrawer() {
-        RouterLink listLink = new RouterLink("Expanses List", ListView.class);
+        RouterLink listLink = new RouterLink("Xpanses List", ListView.class);
         listLink.setHighlightCondition(HighlightConditions.sameLocation());
 
         addToDrawer(
