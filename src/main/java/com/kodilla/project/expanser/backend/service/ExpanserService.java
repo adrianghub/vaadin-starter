@@ -1,11 +1,10 @@
 package com.kodilla.project.expanser.backend.service;
 
-import com.kodilla.project.expanser.backend.entity.Category;
-import com.kodilla.project.expanser.backend.entity.Product;
-import com.kodilla.project.expanser.backend.entity.Shop;
+import com.kodilla.project.expanser.backend.entity.*;
 import com.kodilla.project.expanser.backend.repository.CategoryRepository;
 import com.kodilla.project.expanser.backend.repository.ProductRepository;
 import com.kodilla.project.expanser.backend.repository.ShopRepository;
+import com.kodilla.project.expanser.backend.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -21,15 +20,18 @@ public class ExpanserService {
     private final ProductRepository productRepository;
     private final ShopRepository shopRepository;
     private final CategoryRepository categoryRepository;
+    private final UserRepository userRepository;
 
     public ExpanserService(
             ProductRepository productRepository,
             ShopRepository shopRepository,
-            CategoryRepository categoryRepository
+            CategoryRepository categoryRepository,
+            UserRepository userRepository
     ) {
         this.productRepository = productRepository;
         this.shopRepository = shopRepository;
         this.categoryRepository = categoryRepository;
+        this.userRepository = userRepository;
     }
 
     public List<Product> findAllProducts(String productFilter) {
@@ -66,6 +68,11 @@ public class ExpanserService {
 
     @PostConstruct
     public void loadData() {
+
+        if (userRepository.count() == 0) {
+            userRepository.save(new User("Andrzej", "admin1", Role.USER));
+            userRepository.save(new User("Bozena", "admin123", Role.ADMIN));
+        }
 
         if (shopRepository.count() == 0) {
             shopRepository.saveAll(

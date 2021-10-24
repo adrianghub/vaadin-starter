@@ -16,7 +16,6 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
 @CssImport("./styles/shared-styles.css")
-@PWA(name = "Expanser", shortName = "Expanser", enableInstallPrompt = false)
 @PageTitle("Product List | Expanser")
 @Route(value = "", layout = MainLayout.class)
 public class ListView extends VerticalLayout {

@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface ProductRepository extends JpaRepository<Product, Integer> {
 
     @Query("SELECT p FROM Product p WHERE lower(p.name) like lower(concat('%', :searchTerm, '%'))")
     List<Product> search(@Param("searchTerm") String searchTerm);

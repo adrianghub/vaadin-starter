@@ -9,10 +9,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.HighlightConditions;
 import com.vaadin.flow.router.RouterLink;
-import com.vaadin.flow.theme.Theme;
-import com.vaadin.flow.theme.lumo.Lumo;
 
-@Theme(value = Lumo.class, variant = Lumo.DARK)
 public class MainLayout extends AppLayout {
 
     public MainLayout() {
@@ -22,6 +19,7 @@ public class MainLayout extends AppLayout {
 
     private void createHeader() {
         H1 title = new H1("Expanser");
+        title.addClassNames("text-l", "m-m");
 
         HorizontalLayout header = new HorizontalLayout(
                 new DrawerToggle(),

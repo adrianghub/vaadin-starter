@@ -4,9 +4,12 @@ package com.kodilla.project.expanser.backend.entity;
 import org.hibernate.annotations.Formula;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Category extends AbstractEntity {
+
+    @NotEmpty
     private String name;
 
     public Category() {
