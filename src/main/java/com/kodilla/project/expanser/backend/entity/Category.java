@@ -1,5 +1,8 @@
 package com.kodilla.project.expanser.backend.entity;
 
+
+import org.hibernate.annotations.Formula;
+
 import javax.persistence.Entity;
 
 @Entity
@@ -7,6 +10,13 @@ public class Category extends AbstractEntity {
     private String name;
 
     public Category() {
+    }
+
+    @Formula("(SELECT SUM(p.price) FROM Product p WHERE p.category_id = id)")
+    private Double totalSpent;
+
+    public Double getTotalSpent() {
+        return totalSpent;
     }
 
     public Category(String name) {

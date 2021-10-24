@@ -1,5 +1,7 @@
 package com.kodilla.project.expanser.backend.entity;
 
+import org.hibernate.annotations.Formula;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
@@ -14,6 +16,13 @@ public class Shop extends AbstractEntity {
     private List<Product> products = new LinkedList<>();
 
     public Shop() {}
+
+    @Formula("(SELECT COUNT(p.id) FROM Product p WHERE p.shop_id = id)")
+    private int productCount;
+
+    public int getProductCount() {
+        return productCount;
+    }
 
     public Shop(String name) {
         setName(name);
