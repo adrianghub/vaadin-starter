@@ -1,4 +1,4 @@
-package com.kodilla.project.expanser.ui;
+package com.kodilla.project.expanser.ui.list;
 
 import com.kodilla.project.expanser.backend.entity.Category;
 import com.kodilla.project.expanser.backend.entity.Product;

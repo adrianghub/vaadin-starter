@@ -1,9 +1,9 @@
-package com.kodilla.project.expanser.ui;
+package com.kodilla.project.expanser.ui.list;
 
 import com.kodilla.project.expanser.backend.entity.Product;
 import com.kodilla.project.expanser.backend.service.ExpanserService;
+import com.kodilla.project.expanser.ui.MainLayout;
 import com.vaadin.flow.component.Component;
-import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.grid.Grid;
@@ -14,14 +14,11 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.theme.Theme;
-import com.vaadin.flow.theme.lumo.Lumo;
 
 @CssImport("./styles/shared-styles.css")
-@PWA(name = "Expanse Tracker", shortName = "Expanse Tracker", enableInstallPrompt = false)
-@PageTitle("Expanse Tracker")
-@Theme(value = Lumo.class, variant = Lumo.DARK)
-@Route("")
+@PWA(name = "Expanser", shortName = "Expanser", enableInstallPrompt = false)
+@PageTitle("Product List | Expanser")
+@Route(value = "", layout = MainLayout.class)
 public class ListView extends VerticalLayout {
     private final ExpanserService service;
     Grid<Product> grid = new Grid<>(Product.class);
@@ -30,7 +27,7 @@ public class ListView extends VerticalLayout {
 
     public ListView(ExpanserService service) {
         this.service = service;
-        addClassName("expanse-tracker-view");
+        addClassName("expanser-view");
         setSizeFull();
 
         configureGrid();

@@ -6,8 +6,13 @@
 
 /* Example: CSS class name to center align the content . */
 @media all and (max-width: 1100px) {
-  .expanse-tracker-view.active .toolbar,
-  .expanse-tracker-view.active .product-grid {
+  .expanser-view.active .toolbar,
+  .expanser-view.active .product-grid {
     display: none;
   }
+}
+
+a[highlight] {
+  font-weight: bold;
+  text-decoration: underline;
 }
