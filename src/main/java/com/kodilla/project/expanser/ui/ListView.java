@@ -3,6 +3,7 @@ package com.kodilla.project.expanser.ui;
 import com.kodilla.project.expanser.backend.entity.Product;
 import com.kodilla.project.expanser.backend.service.ExpanserService;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.grid.Grid;
@@ -65,6 +66,22 @@ public class ListView extends VerticalLayout {
     private void configureForm() {
         form = new ProductForm(service.findAllShops(), service.findAllCategories());
         form.setWidth("25em");
+
+        form.addListener(ProductForm.SaveEvent.class, this::saveProduct);
+        form.addListener(ProductForm.DeleteEvent.class, this::deleteProduct);
+        form.addListener(ProductForm.CloseEvent.class, e -> closeProductForm());
+    }
+
+    private void deleteProduct(ProductForm.DeleteEvent event) {
+        service.deleteProduct(event.getProduct());
+        updateList();
+        closeProductForm();
+    }
+
+    private void saveProduct(ProductForm.SaveEvent event) {
+        service.saveProduct(event.getProduct());
+        updateList();
+        closeProductForm();
     }
 
     private Component getToolbar() {
