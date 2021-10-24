@@ -12,6 +12,7 @@ import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.formlayout.FormLayout;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.NumberField;
 import com.vaadin.flow.component.textfield.TextField;
@@ -80,8 +81,7 @@ public class ProductForm extends FormLayout {
             binder.writeBean(product);
             fireEvent(new SaveEvent(this, product));
         } catch (ValidationException e) {
-            // TODO: Implement ui for error notification
-            e.printStackTrace();
+            Notification.show("Product validation failed.");
         }
     }
 

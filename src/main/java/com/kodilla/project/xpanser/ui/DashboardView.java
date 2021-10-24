@@ -20,7 +20,7 @@ public class DashboardView extends VerticalLayout {
         this.service = service;
         addClassName("dashboard-view");
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
-        add(getProductStats() ,getShopStats(), getCategoryStats());
+        add(getProductStats(), getShopStats(), getCategoryStats());
     }
 
     private Component getProductStats() {
