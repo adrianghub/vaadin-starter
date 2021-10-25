@@ -1,0 +1,18 @@
+@media all and (max-width: 1200px) {
+    .login-view {
+        display: grid;
+        padding: 15% 20%;
+    }
+}
+
+@media all and (min-width: 1201px) {
+    .login-view {
+        display: grid;
+        padding: 15% 40%;
+    }
+}
+
+:host {
+    display: block;
+    padding: var(--lumo-space-m) var(--lumo-space-l);
+}
