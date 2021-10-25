@@ -10,6 +10,7 @@ import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouterLink;
 
 @Route("login")
 @PageTitle("Login | Xpanser")
@@ -28,11 +29,12 @@ public class LoginView extends VerticalLayout {
                 new Button("Login", e -> {
                     try {
                         authService.authenticate(email.getValue(), password.getValue());
-                        UI.getCurrent().navigate("/");
+                        UI.getCurrent().navigate("");
                     } catch (AuthService.AuthException authException) {
                         Notification.show("Wrong credentials.");
                     }
                 })
+//            new RouterLink("Register", RegisterView.class)
         );
     }
 }
