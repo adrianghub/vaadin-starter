@@ -3,7 +3,6 @@ package com.kodilla.project.xpanser.ui.register;
 import com.kodilla.project.xpanser.backend.service.AuthService;
 import com.kodilla.project.xpanser.ui.login.LoginView;
 import com.kodilla.project.xpanser.util.BottomMessagePanel;
-import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.JsModule;
@@ -66,7 +65,7 @@ public class RegisterView extends VerticalLayout {
             Notification.show("Passwords don't match.");
         } else {
             authService.register(username, email, password);
-            UI.getCurrent().navigate("login");
+            Notification.show("Link with activation has been sent to provided email address.");
         }
     }
 }

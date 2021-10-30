@@ -54,7 +54,7 @@ public class LoginView extends VerticalLayout {
             authService.authenticate(email, password);
             UI.getCurrent().navigate("");
         } catch (AuthService.AuthException authException) {
-            Notification.show("Wrong credentials.");
+            Notification.show("Invalid credentials.");
         }
     }
 }

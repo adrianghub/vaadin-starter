@@ -20,6 +20,8 @@ public class User extends AbstractEntity {
     private String passwordSalt;
 
     private Role role;
+    private String activationCode;
+    private boolean isActive;
 
     private static final int SALT_RAND = 32;
 
@@ -32,6 +34,7 @@ public class User extends AbstractEntity {
         this.role = role;
         this.passwordSalt = RandomStringUtils.random(SALT_RAND);
         this.passwordHash = DigestUtils.sha1Hex(password + passwordSalt);
+        this.activationCode = RandomStringUtils.randomAlphanumeric(SALT_RAND);
     }
 
     public boolean comparePassword(String password) {
@@ -44,6 +47,14 @@ public class User extends AbstractEntity {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPasswordHash() {
@@ -68,5 +79,21 @@ public class User extends AbstractEntity {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 }
