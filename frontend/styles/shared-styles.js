@@ -13,3 +13,6 @@ $_documentContainer.innerHTML = `
 `;
 
 document.head.appendChild($_documentContainer.content);
+
+console.log("Email: admin1@secret.co");
+console.log("Password: admin1")

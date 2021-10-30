@@ -60,13 +60,17 @@ public class AuthService {
             routes.add(new AuthorizedRoute("logout", "Logout", LogoutView.class));
 
         } else if (role.equals(Role.ADMIN)) {
-            routes.add(new AuthorizedRoute("", "Product List", ListView.class));
-            routes.add(new AuthorizedRoute("dashboard", "Dashboard", DashboardView.class));
-            routes.add(new AuthorizedRoute("about", "About", AboutView.class));
+            routes.add(new AuthorizedRoute("", "Product List | Xpanser", ListView.class));
+            routes.add(new AuthorizedRoute("dashboard", "Dashboard | Xpanser", DashboardView.class));
+            routes.add(new AuthorizedRoute("about", "About | Expanser", AboutView.class));
             routes.add(new AuthorizedRoute("logout", "Logout", LogoutView.class));
         }
 
         return routes;
+    }
+
+    public void register(String username, String email, String password) {
+        userRepository.save(new User(username, email, password, Role.USER));
     }
 
 }
