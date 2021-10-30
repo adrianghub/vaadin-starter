@@ -70,7 +70,7 @@ public class XpanserService {
     public void loadData() {
 
         if (userRepository.count() == 0) {
-            userRepository.save(new User("Bozena", "admin1@secret.co", "admin1", Role.ADMIN));
+            userRepository.save(new User("Andrzej", "admin1@secret.co", "admin1", Role.ADMIN, true));
         }
 
         if (shopRepository.count() == 0) {

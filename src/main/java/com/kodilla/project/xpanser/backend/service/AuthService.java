@@ -68,7 +68,7 @@ public class AuthService {
             routes.add(new AuthorizedRoute("logout", "Logout", LogoutView.class));
 
         } else if (role.equals(Role.ADMIN)) {
-            routes.add(new AuthorizedRoute("", "Product List | Xpanser", ListView.class));
+            routes.add(new AuthorizedRoute("list", "Product List | Xpanser", ListView.class));
             routes.add(new AuthorizedRoute("dashboard", "Dashboard | Xpanser", DashboardView.class));
             routes.add(new AuthorizedRoute("about", "About | Expanser", AboutView.class));
             routes.add(new AuthorizedRoute("logout", "Logout", LogoutView.class));
@@ -78,11 +78,10 @@ public class AuthService {
     }
 
     public void register(String username, String email, String password) {
-        User user = userRepository.save(new User(username, email, password, Role.USER));
+        User user = userRepository.save(new User(username, email, password, Role.USER, false));
         String activationEndpoint = "http://localhost:8080/active?code=" + user.getActivationCode();
         System.out.println(activationEndpoint);
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom(adminConfig.getAdminMail());
         message.setSubject("Confirmation email");
         message.setText(activationEndpoint);
         message.setTo(email);

@@ -28,13 +28,14 @@ public class User extends AbstractEntity {
     public User() {
     }
 
-    public User(String username, String email, String password, Role role) {
+    public User(String username, String email, String password, Role role, boolean isActive) {
         this.username = username;
         this.email = email;
         this.role = role;
         this.passwordSalt = RandomStringUtils.random(SALT_RAND);
         this.passwordHash = DigestUtils.sha1Hex(password + passwordSalt);
         this.activationCode = RandomStringUtils.randomAlphanumeric(SALT_RAND);
+        this.isActive = isActive;
     }
 
     public boolean comparePassword(String password) {

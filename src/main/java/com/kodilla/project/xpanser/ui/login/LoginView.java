@@ -17,7 +17,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
 
-@Route("login")
+@Route("")
 @PageTitle("Login | Xpanser")
 @JsModule("./styles/shared-styles.js")
 @CssImport("./styles/views/login/login-view.css")
@@ -52,7 +52,7 @@ public class LoginView extends VerticalLayout {
     private void handleLogin(String email, String password) {
         try {
             authService.authenticate(email, password);
-            UI.getCurrent().navigate("");
+            UI.getCurrent().navigate("list");
         } catch (AuthService.AuthException authException) {
             Notification.show("Invalid credentials.");
         }
