@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kodilla.project</groupId>
@@ -9,7 +10,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <java.version>15</java.version>
+        <java.version>17</java.version>
         <vaadin.version>21.0.0</vaadin.version>
     </properties>
 
@@ -39,7 +40,8 @@
         <!-- Repository used by many Vaadin add-ons -->
         <repository>
             <id>Vaadin Directory</id>
-            <url>https://maven.vaadin.com/vaadin-addons</url>
+            <url>https://maven.vaadin.com/vaadin-addons
+            </url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -87,30 +89,41 @@
                     <artifactId>*</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.webjars.bowergithub.insites</groupId>
+                    <groupId>
+                        org.webjars.bowergithub.insites
+                    </groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.webjars.bowergithub.polymer</groupId>
+                    <groupId>
+                        org.webjars.bowergithub.polymer
+                    </groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.webjars.bowergithub.polymerelements</groupId>
+                    <groupId>
+                        org.webjars.bowergithub.polymerelements
+                    </groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.webjars.bowergithub.vaadin</groupId>
+                    <groupId>
+                        org.webjars.bowergithub.vaadin
+                    </groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.webjars.bowergithub.webcomponents</groupId>
+                    <groupId>
+                        org.webjars.bowergithub.webcomponents
+                    </groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-spring-boot-starter</artifactId>
+            <artifactId>vaadin-spring-boot-starter
+            </artifactId>
             <exclusions>
                 <!-- Excluding so that webjars are not included. -->
                 <exclusion>
@@ -138,21 +151,25 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-starter-data-jpa
+            </artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
+            <artifactId>spring-boot-starter-validation
+            </artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <artifactId>spring-boot-starter-test
+            </artifactId>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
                     <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
+                    <artifactId>junit-vintage-engine
+                    </artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -185,10 +202,14 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
+            <artifactId>spring-boot-starter-mail
+            </artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
         </dependency>
     </dependencies>
 
@@ -197,7 +218,8 @@
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <artifactId>spring-boot-maven-plugin
+                </artifactId>
                 <configuration>
                     <wait>500</wait>
                     <maxAttempts>240</maxAttempts>
@@ -220,8 +242,8 @@
                 <artifactId>maven-compiler-plugin
                 </artifactId>
                 <configuration>
-                    <source>16</source>
-                    <target>16</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -231,56 +253,36 @@
         <profile>
             <!-- Production mode is activated using -Pproduction -->
             <id>production</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                </dependency>
+            </dependencies>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>com.vaadin</groupId>
-                        <artifactId>vaadin-maven-plugin</artifactId>
+                        <artifactId>vaadin-maven-plugin
+                        </artifactId>
                         <version>${vaadin.version}</version>
                         <executions>
                             <execution>
                                 <goals>
-                                    <goal>build-frontend</goal>
+                                    <goal>build-frontend
+                                    </goal>
                                 </goals>
                                 <phase>compile</phase>
                             </execution>
                         </executions>
                         <configuration>
-                            <productionMode>true</productionMode>
+                            <productionMode>true
+                            </productionMode>
                             <pnpmEnable>false</pnpmEnable>
                         </configuration>
                     </plugin>
                 </plugins>
             </build>
         </profile>
-
-        <profile>
-            <id>it</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>start-spring-boot</id>
-                                <phase>pre-integration-test</phase>
-                                <goals>
-                                    <goal>start</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>stop-spring-boot</id>
-                                <phase>post-integration-test</phase>
-                                <goals>
-                                    <goal>stop</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
     </profiles>
 </project>
