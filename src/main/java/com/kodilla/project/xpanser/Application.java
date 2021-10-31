@@ -6,14 +6,13 @@ import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 /**
  * The entry point of the Spring Boot application.
  */
 @SpringBootApplication
-@PWA(name = "Xpanser App", shortName = "Xpanser")
+@PWA(name = "Xpanser App", shortName = "Xpanser", iconPath = "icons/icon.png", offlineResources = "icons/offline.html")
 @Theme(themeClass = Lumo.class, variant = Lumo.DARK)
 public class Application extends SpringBootServletInitializer implements AppShellConfigurator {
 

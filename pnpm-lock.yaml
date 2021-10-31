@@ -1,17 +1,7 @@
 dependencies:
   '@heroku/buildpack-registry': 1.0.1
-  '@polymer/iron-a11y-announcer': 3.0.2
-  '@polymer/iron-a11y-keys-behavior': 3.0.1
-  '@polymer/iron-fit-behavior': 3.0.2
-  '@polymer/iron-flex-layout': 3.0.1
   '@polymer/iron-icon': 3.0.1
-  '@polymer/iron-iconset-svg': 3.0.1
   '@polymer/iron-list': 3.1.0
-  '@polymer/iron-media-query': 3.0.1
-  '@polymer/iron-meta': 3.0.1
-  '@polymer/iron-overlay-behavior': 3.0.3
-  '@polymer/iron-resizable-behavior': 3.0.1
-  '@polymer/iron-scroll-target-behavior': 3.0.1
   '@polymer/polymer': 3.2.0
   '@vaadin/flow-frontend': link:target/flow-frontend
   '@vaadin/form': link:target/flow-frontend/form
@@ -26,7 +16,6 @@ dependencies:
   '@vaadin/vaadin-combo-box': 21.0.0
   '@vaadin/vaadin-confirm-dialog': 21.0.0
   '@vaadin/vaadin-context-menu': 21.0.0
-  '@vaadin/vaadin-control-state-mixin': 21.0.0
   '@vaadin/vaadin-cookie-consent': 21.0.0
   '@vaadin/vaadin-core-shrinkwrap': 21.0.0
   '@vaadin/vaadin-crud': 21.0.0
@@ -34,9 +23,7 @@ dependencies:
   '@vaadin/vaadin-date-picker': 21.0.0
   '@vaadin/vaadin-date-time-picker': 21.0.0
   '@vaadin/vaadin-details': 21.0.0
-  '@vaadin/vaadin-development-mode-detector': 2.0.4
   '@vaadin/vaadin-dialog': 21.0.0
-  '@vaadin/vaadin-element-mixin': 21.0.0
   '@vaadin/vaadin-form-layout': 21.0.0
   '@vaadin/vaadin-grid': 21.0.0
   '@vaadin/vaadin-grid-pro': 21.0.0
@@ -44,7 +31,6 @@ dependencies:
   '@vaadin/vaadin-icons': 21.0.0
   '@vaadin/vaadin-item': 21.0.0
   '@vaadin/vaadin-list-box': 21.0.0
-  '@vaadin/vaadin-list-mixin': 21.0.0
   '@vaadin/vaadin-login': 21.0.0
   '@vaadin/vaadin-lumo-styles': 21.0.0
   '@vaadin/vaadin-material-styles': 21.0.0
@@ -52,7 +38,6 @@ dependencies:
   '@vaadin/vaadin-messages': 21.0.0
   '@vaadin/vaadin-notification': 21.0.0
   '@vaadin/vaadin-ordered-layout': 21.0.0
-  '@vaadin/vaadin-overlay': 21.0.0
   '@vaadin/vaadin-progress-bar': 21.0.0
   '@vaadin/vaadin-radio-button': 21.0.0
   '@vaadin/vaadin-rich-text-editor': 21.0.0
@@ -62,12 +47,9 @@ dependencies:
   '@vaadin/vaadin-tabs': 21.0.0
   '@vaadin/vaadin-template-renderer': 21.0.0
   '@vaadin/vaadin-text-field': 21.0.0
-  '@vaadin/vaadin-themable-mixin': 21.0.0
   '@vaadin/vaadin-time-picker': 21.0.0
   '@vaadin/vaadin-upload': 21.0.0
-  '@vaadin/vaadin-usage-statistics': 2.1.0
   '@vaadin/vaadin-virtual-list': 21.0.0
-  '@webcomponents/shadycss': 1.9.6
   construct-style-sheets-polyfill: 2.4.16
   lit: 2.0.0-rc.3
 devDependencies:
@@ -8463,18 +8445,8 @@ packages:
       integrity: sha512-AX3Zw5iPruN5ie6xGRIDgqkT+ZhnRlZMLMHAs8tg7nRruy2Nb+i5o9bwghAogtM08q1dpr2LVoS8KSTMYpWXUw==
 specifiers:
   '@heroku/buildpack-registry': ^1.0.1
-  '@polymer/iron-a11y-announcer': 3.0.2
-  '@polymer/iron-a11y-keys-behavior': 3.0.1
-  '@polymer/iron-fit-behavior': 3.0.2
-  '@polymer/iron-flex-layout': 3.0.1
   '@polymer/iron-icon': 3.0.1
-  '@polymer/iron-iconset-svg': 3.0.1
   '@polymer/iron-list': 3.1.0
-  '@polymer/iron-media-query': 3.0.1
-  '@polymer/iron-meta': 3.0.1
-  '@polymer/iron-overlay-behavior': 3.0.3
-  '@polymer/iron-resizable-behavior': 3.0.1
-  '@polymer/iron-scroll-target-behavior': 3.0.1
   '@polymer/polymer': 3.2.0
   '@types/validator': 13.1.0
   '@vaadin/application-theme-plugin': ./target/plugins/application-theme-plugin
@@ -8494,7 +8466,6 @@ specifiers:
   '@vaadin/vaadin-combo-box': 21.0.0
   '@vaadin/vaadin-confirm-dialog': 21.0.0
   '@vaadin/vaadin-context-menu': 21.0.0
-  '@vaadin/vaadin-control-state-mixin': 21.0.0
   '@vaadin/vaadin-cookie-consent': 21.0.0
   '@vaadin/vaadin-core-shrinkwrap': 21.0.0
   '@vaadin/vaadin-crud': 21.0.0
@@ -8502,9 +8473,7 @@ specifiers:
   '@vaadin/vaadin-date-picker': 21.0.0
   '@vaadin/vaadin-date-time-picker': 21.0.0
   '@vaadin/vaadin-details': 21.0.0
-  '@vaadin/vaadin-development-mode-detector': 2.0.4
   '@vaadin/vaadin-dialog': 21.0.0
-  '@vaadin/vaadin-element-mixin': 21.0.0
   '@vaadin/vaadin-form-layout': 21.0.0
   '@vaadin/vaadin-grid': 21.0.0
   '@vaadin/vaadin-grid-pro': 21.0.0
@@ -8512,7 +8481,6 @@ specifiers:
   '@vaadin/vaadin-icons': 21.0.0
   '@vaadin/vaadin-item': 21.0.0
   '@vaadin/vaadin-list-box': 21.0.0
-  '@vaadin/vaadin-list-mixin': 21.0.0
   '@vaadin/vaadin-login': 21.0.0
   '@vaadin/vaadin-lumo-styles': 21.0.0
   '@vaadin/vaadin-material-styles': 21.0.0
@@ -8520,7 +8488,6 @@ specifiers:
   '@vaadin/vaadin-messages': 21.0.0
   '@vaadin/vaadin-notification': 21.0.0
   '@vaadin/vaadin-ordered-layout': 21.0.0
-  '@vaadin/vaadin-overlay': 21.0.0
   '@vaadin/vaadin-progress-bar': 21.0.0
   '@vaadin/vaadin-radio-button': 21.0.0
   '@vaadin/vaadin-rich-text-editor': 21.0.0
@@ -8530,12 +8497,9 @@ specifiers:
   '@vaadin/vaadin-tabs': 21.0.0
   '@vaadin/vaadin-template-renderer': 21.0.0
   '@vaadin/vaadin-text-field': 21.0.0
-  '@vaadin/vaadin-themable-mixin': 21.0.0
   '@vaadin/vaadin-time-picker': 21.0.0
   '@vaadin/vaadin-upload': 21.0.0
-  '@vaadin/vaadin-usage-statistics': 2.1.0
   '@vaadin/vaadin-virtual-list': 21.0.0
-  '@webcomponents/shadycss': 1.9.6
   chokidar: ^3.5.0
   compression-webpack-plugin: 4.0.1
   construct-style-sheets-polyfill: 2.4.16
