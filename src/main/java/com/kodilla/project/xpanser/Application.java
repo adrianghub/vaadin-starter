@@ -12,7 +12,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * The entry point of the Spring Boot application.
  */
 @SpringBootApplication
-@PWA(name = "Xpanser App", shortName = "Xpanser", iconPath = "icons/icon.png", offlineResources = "icons/offline.html")
+@PWA(name = "Xpanser App", shortName = "Xpanser", offlineResources = "icons/offline.html")
 @Theme(themeClass = Lumo.class, variant = Lumo.DARK)
 public class Application extends SpringBootServletInitializer implements AppShellConfigurator {
 
