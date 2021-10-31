@@ -1,0 +1,788 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 info pnpm": {
+    "message": "Using hooks from: C:\\dev\\vaadin-crm\\pnpmfile.js",
+    "prefix": "C:\\dev\\vaadin-crm"
+  },
+  "2 info pnpm": {
+    "message": "readPackage hook is declared. Manifests of dependencies might get overridden",
+    "prefix": "C:\\dev\\vaadin-crm"
+  },
+  "3 debug pnpm:package-manifest": {
+    "initial": {
+      "dependencies": {
+        "@polymer/iron-icon": "3.0.1",
+        "@polymer/iron-list": "3.1.0",
+        "@polymer/polymer": "3.2.0",
+        "@vaadin/flow-frontend": "./target/flow-frontend",
+        "@vaadin/form": "./target/flow-frontend/form",
+        "@vaadin/router": "1.7.4",
+        "@vaadin/vaadin-accordion": "21.0.0",
+        "@vaadin/vaadin-app-layout": "21.0.0",
+        "@vaadin/vaadin-avatar": "21.0.0",
+        "@vaadin/vaadin-board": "21.0.0",
+        "@vaadin/vaadin-button": "21.0.0",
+        "@vaadin/vaadin-charts": "21.0.0",
+        "@vaadin/vaadin-checkbox": "21.0.0",
+        "@vaadin/vaadin-combo-box": "21.0.0",
+        "@vaadin/vaadin-confirm-dialog": "21.0.0",
+        "@vaadin/vaadin-context-menu": "21.0.0",
+        "@vaadin/vaadin-cookie-consent": "21.0.0",
+        "@vaadin/vaadin-core-shrinkwrap": "21.0.0",
+        "@vaadin/vaadin-crud": "21.0.0",
+        "@vaadin/vaadin-custom-field": "21.0.0",
+        "@vaadin/vaadin-date-picker": "21.0.0",
+        "@vaadin/vaadin-date-time-picker": "21.0.0",
+        "@vaadin/vaadin-details": "21.0.0",
+        "@vaadin/vaadin-dialog": "21.0.0",
+        "@vaadin/vaadin-form-layout": "21.0.0",
+        "@vaadin/vaadin-grid": "21.0.0",
+        "@vaadin/vaadin-grid-pro": "21.0.0",
+        "@vaadin/vaadin-icon": "21.0.0",
+        "@vaadin/vaadin-icons": "21.0.0",
+        "@vaadin/vaadin-item": "21.0.0",
+        "@vaadin/vaadin-list-box": "21.0.0",
+        "@vaadin/vaadin-login": "21.0.0",
+        "@vaadin/vaadin-lumo-styles": "21.0.0",
+        "@vaadin/vaadin-material-styles": "21.0.0",
+        "@vaadin/vaadin-menu-bar": "21.0.0",
+        "@vaadin/vaadin-messages": "21.0.0",
+        "@vaadin/vaadin-notification": "21.0.0",
+        "@vaadin/vaadin-ordered-layout": "21.0.0",
+        "@vaadin/vaadin-progress-bar": "21.0.0",
+        "@vaadin/vaadin-radio-button": "21.0.0",
+        "@vaadin/vaadin-rich-text-editor": "21.0.0",
+        "@vaadin/vaadin-select": "21.0.0",
+        "@vaadin/vaadin-shrinkwrap": "21.0.0",
+        "@vaadin/vaadin-split-layout": "21.0.0",
+        "@vaadin/vaadin-tabs": "21.0.0",
+        "@vaadin/vaadin-template-renderer": "21.0.0",
+        "@vaadin/vaadin-text-field": "21.0.0",
+        "@vaadin/vaadin-time-picker": "21.0.0",
+        "@vaadin/vaadin-upload": "21.0.0",
+        "@vaadin/vaadin-virtual-list": "21.0.0",
+        "construct-style-sheets-polyfill": "2.4.16",
+        "lit": "2.0.0-rc.3"
+      },
+      "devDependencies": {
+        "@types/validator": "13.1.0",
+        "@vaadin/application-theme-plugin": "./target/plugins/application-theme-plugin",
+        "@vaadin/stats-plugin": "./target/plugins/stats-plugin",
+        "@vaadin/theme-live-reload-plugin": "./target/plugins/theme-live-reload-plugin",
+        "@vaadin/theme-loader": "./target/plugins/theme-loader",
+        "chokidar": "^3.5.0",
+        "compression-webpack-plugin": "4.0.1",
+        "css-loader": "4.2.1",
+        "extra-watch-webpack-plugin": "1.0.3",
+        "extract-loader": "5.1.0",
+        "file-loader": "6.2.0",
+        "fork-ts-checker-webpack-plugin": "6.2.1",
+        "glob": "7.1.6",
+        "html-webpack-plugin": "4.5.1",
+        "lit-css-loader": "0.1.0",
+        "loader-utils": "2.0.0",
+        "ts-loader": "8.0.12",
+        "typescript": "4.3.3",
+        "validator": "13.1.17",
+        "webpack": "4.46.0",
+        "webpack-cli": "3.3.12",
+        "webpack-dev-server": "3.11.0",
+        "webpack-manifest-plugin": "3.0.0",
+        "webpack-merge": "4.2.2",
+        "workbox-core": "6.2.0",
+        "workbox-precaching": "6.2.0",
+        "workbox-webpack-plugin": "6.2.0"
+      },
+      "license": "UNLICENSED",
+      "name": "no-name",
+      "vaadin": {
+        "dependencies": {
+          "@polymer/iron-icon": "3.0.1",
+          "@polymer/iron-list": "3.1.0",
+          "@polymer/polymer": "3.2.0",
+          "@vaadin/router": "1.7.4",
+          "@vaadin/vaadin-accordion": "21.0.0",
+          "@vaadin/vaadin-app-layout": "21.0.0",
+          "@vaadin/vaadin-avatar": "21.0.0",
+          "@vaadin/vaadin-board": "21.0.0",
+          "@vaadin/vaadin-button": "21.0.0",
+          "@vaadin/vaadin-charts": "21.0.0",
+          "@vaadin/vaadin-checkbox": "21.0.0",
+          "@vaadin/vaadin-combo-box": "21.0.0",
+          "@vaadin/vaadin-confirm-dialog": "21.0.0",
+          "@vaadin/vaadin-context-menu": "21.0.0",
+          "@vaadin/vaadin-cookie-consent": "21.0.0",
+          "@vaadin/vaadin-core-shrinkwrap": "21.0.0",
+          "@vaadin/vaadin-crud": "21.0.0",
+          "@vaadin/vaadin-custom-field": "21.0.0",
+          "@vaadin/vaadin-date-picker": "21.0.0",
+          "@vaadin/vaadin-date-time-picker": "21.0.0",
+          "@vaadin/vaadin-details": "21.0.0",
+          "@vaadin/vaadin-dialog": "21.0.0",
+          "@vaadin/vaadin-form-layout": "21.0.0",
+          "@vaadin/vaadin-grid": "21.0.0",
+          "@vaadin/vaadin-grid-pro": "21.0.0",
+          "@vaadin/vaadin-icon": "21.0.0",
+          "@vaadin/vaadin-icons": "21.0.0",
+          "@vaadin/vaadin-item": "21.0.0",
+          "@vaadin/vaadin-list-box": "21.0.0",
+          "@vaadin/vaadin-login": "21.0.0",
+          "@vaadin/vaadin-lumo-styles": "21.0.0",
+          "@vaadin/vaadin-material-styles": "21.0.0",
+          "@vaadin/vaadin-menu-bar": "21.0.0",
+          "@vaadin/vaadin-messages": "21.0.0",
+          "@vaadin/vaadin-notification": "21.0.0",
+          "@vaadin/vaadin-ordered-layout": "21.0.0",
+          "@vaadin/vaadin-progress-bar": "21.0.0",
+          "@vaadin/vaadin-radio-button": "21.0.0",
+          "@vaadin/vaadin-rich-text-editor": "21.0.0",
+          "@vaadin/vaadin-select": "21.0.0",
+          "@vaadin/vaadin-shrinkwrap": "21.0.0",
+          "@vaadin/vaadin-split-layout": "21.0.0",
+          "@vaadin/vaadin-tabs": "21.0.0",
+          "@vaadin/vaadin-template-renderer": "21.0.0",
+          "@vaadin/vaadin-text-field": "21.0.0",
+          "@vaadin/vaadin-time-picker": "21.0.0",
+          "@vaadin/vaadin-upload": "21.0.0",
+          "@vaadin/vaadin-virtual-list": "21.0.0",
+          "construct-style-sheets-polyfill": "2.4.16",
+          "lit": "2.0.0-rc.3"
+        },
+        "devDependencies": {
+          "@types/validator": "13.1.0",
+          "chokidar": "^3.5.0",
+          "compression-webpack-plugin": "4.0.1",
+          "css-loader": "4.2.1",
+          "extra-watch-webpack-plugin": "1.0.3",
+          "extract-loader": "5.1.0",
+          "file-loader": "6.2.0",
+          "fork-ts-checker-webpack-plugin": "6.2.1",
+          "glob": "7.1.6",
+          "html-webpack-plugin": "4.5.1",
+          "lit-css-loader": "0.1.0",
+          "loader-utils": "2.0.0",
+          "ts-loader": "8.0.12",
+          "typescript": "4.3.3",
+          "validator": "13.1.17",
+          "webpack": "4.46.0",
+          "webpack-cli": "3.3.12",
+          "webpack-dev-server": "3.11.0",
+          "webpack-manifest-plugin": "3.0.0",
+          "webpack-merge": "4.2.2",
+          "workbox-core": "6.2.0",
+          "workbox-precaching": "6.2.0",
+          "workbox-webpack-plugin": "6.2.0"
+        },
+        "hash": "68bd5f5c2954177834e686536400f117ae76d4ea99b76f834e0f48010239171a"
+      }
+    },
+    "prefix": "C:\\dev\\vaadin-crm"
+  },
+  "4 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "C:\\Users\\adria\\.pnpm-store\\v3",
+    "virtualStoreDir": "C:\\dev\\vaadin-crm\\node_modules\\.pnpm"
+  },
+  "5 debug pnpm:stage": {
+    "prefix": "C:\\dev\\vaadin-crm",
+    "stage": "resolution_started"
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/validator/13.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/validator",
+      "rawSpec": "13.1.0"
+    }
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chokidar/3.5.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "chokidar",
+      "rawSpec": "^3.5.0"
+    }
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/compression-webpack-plugin/4.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "compression-webpack-plugin",
+      "rawSpec": "4.0.1"
+    }
+  },
+  "9 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/css-loader/4.2.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "css-loader",
+      "rawSpec": "4.2.1"
+    }
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/extra-watch-webpack-plugin/1.0.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "extra-watch-webpack-plugin",
+      "rawSpec": "1.0.3"
+    }
+  },
+  "11 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/extract-loader/5.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "extract-loader",
+      "rawSpec": "5.1.0"
+    }
+  },
+  "12 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/file-loader/6.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "file-loader",
+      "rawSpec": "6.2.0"
+    }
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/fork-ts-checker-webpack-plugin/6.2.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "fork-ts-checker-webpack-plugin",
+      "rawSpec": "6.2.1"
+    }
+  },
+  "14 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/glob/7.1.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "glob",
+      "rawSpec": "7.1.6"
+    }
+  },
+  "15 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/html-webpack-plugin/4.5.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "html-webpack-plugin",
+      "rawSpec": "4.5.1"
+    }
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/lit-css-loader/0.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "lit-css-loader",
+      "rawSpec": "0.1.0"
+    }
+  },
+  "17 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/loader-utils/2.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "loader-utils",
+      "rawSpec": "2.0.0"
+    }
+  },
+  "18 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ts-loader/8.0.12",
+    "wanted": {
+      "dependentId": ".",
+      "name": "ts-loader",
+      "rawSpec": "8.0.12"
+    }
+  },
+  "19 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/typescript/4.3.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "typescript",
+      "rawSpec": "4.3.3"
+    }
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/validator/13.1.17",
+    "wanted": {
+      "dependentId": ".",
+      "name": "validator",
+      "rawSpec": "13.1.17"
+    }
+  },
+  "21 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/webpack/4.46.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "webpack",
+      "rawSpec": "4.46.0"
+    }
+  },
+  "22 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/webpack-cli/3.3.12",
+    "wanted": {
+      "dependentId": ".",
+      "name": "webpack-cli",
+      "rawSpec": "3.3.12"
+    }
+  },
+  "23 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/webpack-dev-server/3.11.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "webpack-dev-server",
+      "rawSpec": "3.11.0"
+    }
+  },
+  "24 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/webpack-manifest-plugin/3.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "webpack-manifest-plugin",
+      "rawSpec": "3.0.0"
+    }
+  },
+  "25 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/webpack-merge/4.2.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "webpack-merge",
+      "rawSpec": "4.2.2"
+    }
+  },
+  "26 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/workbox-core/6.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "workbox-core",
+      "rawSpec": "6.2.0"
+    }
+  },
+  "27 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/workbox-precaching/6.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "workbox-precaching",
+      "rawSpec": "6.2.0"
+    }
+  },
+  "28 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/workbox-webpack-plugin/6.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "workbox-webpack-plugin",
+      "rawSpec": "6.2.0"
+    }
+  },
+  "29 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@polymer/iron-icon/3.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@polymer/iron-icon",
+      "rawSpec": "3.0.1"
+    }
+  },
+  "30 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@polymer/iron-list/3.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@polymer/iron-list",
+      "rawSpec": "3.1.0"
+    }
+  },
+  "31 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@polymer/polymer/3.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@polymer/polymer",
+      "rawSpec": "3.2.0"
+    }
+  },
+  "32 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/router/1.7.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/router",
+      "rawSpec": "1.7.4"
+    }
+  },
+  "33 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-accordion/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-accordion",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "34 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-app-layout/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-app-layout",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "35 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-avatar/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-avatar",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "36 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-board/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-board",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "37 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-button/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-button",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "38 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-charts/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-charts",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "39 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-checkbox/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-checkbox",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "40 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-combo-box/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-combo-box",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "41 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-confirm-dialog/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-confirm-dialog",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "42 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-context-menu/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-context-menu",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "43 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-cookie-consent/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-cookie-consent",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "44 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-core-shrinkwrap/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-core-shrinkwrap",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "45 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-crud/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-crud",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "46 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-custom-field/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-custom-field",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "47 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-date-picker/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-date-picker",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "48 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-date-time-picker/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-date-time-picker",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "49 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-details/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-details",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "50 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-dialog/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-dialog",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "51 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-form-layout/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-form-layout",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "52 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-grid/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-grid",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "53 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-grid-pro/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-grid-pro",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "54 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-icon/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-icon",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "55 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-icons/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-icons",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "56 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-item/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-item",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "57 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-list-box/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-list-box",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "58 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-login/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-login",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "59 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-lumo-styles/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-lumo-styles",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "60 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-material-styles/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-material-styles",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "61 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-menu-bar/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-menu-bar",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "62 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-messages/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-messages",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "63 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-notification/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-notification",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "64 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-ordered-layout/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-ordered-layout",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "65 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-progress-bar/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-progress-bar",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "66 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-radio-button/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-radio-button",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "67 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-rich-text-editor/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-rich-text-editor",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "68 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-select/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-select",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "69 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-shrinkwrap/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-shrinkwrap",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "70 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-split-layout/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-split-layout",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "71 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-tabs/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-tabs",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "72 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-template-renderer/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-template-renderer",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "73 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-text-field/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-text-field",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "74 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-time-picker/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-time-picker",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "75 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-upload/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-upload",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "76 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@vaadin/vaadin-virtual-list/21.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@vaadin/vaadin-virtual-list",
+      "rawSpec": "21.0.0"
+    }
+  },
+  "77 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/construct-style-sheets-polyfill/2.4.16",
+    "wanted": {
+      "dependentId": ".",
+      "name": "construct-style-sheets-polyfill",
+      "rawSpec": "2.4.16"
+    }
+  },
+  "78 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/lit/2.0.0-rc.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "lit",
+      "rawSpec": "2.0.0-rc.3"
+    }
+  },
+  "79 error pnpm": {
+    "message": {
+      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+      "pkgsStack": []
+    },
+    "err": {
+      "name": "Error",
+      "message": "No package.json (or package.yaml, or package.json5) was found in \"C:\\dev\\vaadin-crm\\target\\plugins\\application-theme-plugin\".",
+      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+      "stack": "Error: No package.json (or package.yaml, or package.json5) was found in \"C:\\dev\\vaadin-crm\\target\\plugins\\application-theme-plugin\".\n    at readProjectManifest (C:\\Users\\adria\\AppData\\Local\\npm-cache\\_npx\\6926b1ac96192030\\node_modules\\pnpm\\dist\\pnpm.js:43174:11)\n    at async Object.readProjectManifestOnly (C:\\Users\\adria\\AppData\\Local\\npm-cache\\_npx\\6926b1ac96192030\\node_modules\\pnpm\\dist\\pnpm.js:43178:24)\n    at async Object.resolveLocal [as default] (C:\\Users\\adria\\AppData\\Local\\npm-cache\\_npx\\6926b1ac96192030\\node_modules\\pnpm\\dist\\pnpm.js:72178:33)\n    at async Object.resolve (C:\\Users\\adria\\AppData\\Local\\npm-cache\\_npx\\6926b1ac96192030\\node_modules\\pnpm\\dist\\pnpm.js:73098:307)\n    at async run (C:\\Users\\adria\\AppData\\Local\\npm-cache\\_npx\\6926b1ac96192030\\node_modules\\pnpm\\dist\\pnpm.js:83441:21)"
+    }
+  }
+}
